@@ -1,0 +1,64 @@
+<mat-toolbar class="col-md-3 col-sm-3 col-3 ">
+  <button mat-icon-button (click)="sidenav.toggle()" class="example-icon hamberber"
+    aria-label="Icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span routerLink="">Freelancing Hansen</span>
+  <span class="example-spacer"></span>
+  <div class="menuButtons">
+    <button routerLink="/skills" mat-icon mat-button>
+      <mat-icon>bookmark</mat-icon>
+      <span class="navButtonText">Skills</span>
+    </button>
+    <button routerLink="/portfolio" mat-icon mat-button>
+      <mat-icon>mic</mat-icon>
+      <span class="navButtonText">Portfolio</span>
+    </button>
+    <button routerLink="/experiences" mat-icon mat-button>
+      <mat-icon>apps</mat-icon>
+      <span class="navButtonText">Experiences</span>
+    </button>
+    <button routerLink="/about" mat-icon mat-button>
+      <mat-icon>person_pin</mat-icon>
+      <span class="navButtonText">About Me</span>
+    </button>
+
+  </div>
+
+  <div>
+    <button mat-icon-button class="example-icon" routerLink="/search">
+      <mat-icon>search</mat-icon>
+    </button>
+    <!-- <span class="navButtonText">Search</span> -->
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="sideContainer">
+  <mat-sidenav #sidenav mode="push">
+    <mat-list>
+      <button routerLink="/about" mat-raised-button>About Me</button>
+      <mat-divider></mat-divider>
+      <button routerLink="/search" mat-raised-button>Search</button>
+      <mat-divider></mat-divider>
+      <button routerLink="/portfolio" mat-raised-button>Portfolio</button>
+      <mat-divider></mat-divider>
+    </mat-list>
+    <mat-list role="list">
+      <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
+      <mat-list-item role="listitem">Item 1</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

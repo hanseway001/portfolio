@@ -1,0 +1,25 @@
+.content {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: fit-content;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+    padding: 2em 0;
+}
+
+h1 {
+    font-size: 6em;
+    max-height: fit-content;
+    margin: 0;
+}
+
+.experience-card {
+    max-width: 450px;
+    border-radius: 10px;
+    margin: 2em;
+}

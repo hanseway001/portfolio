@@ -1,0 +1,38 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  button {
+    margin: 0 5px ;
+  }
+
+ .sideContainer {
+    min-height: 100vh;
+  }
+  .content {
+    min-height: 100vh;
+  }
+  .menuButtons {
+    display: flex;
+  }
+  .hamberber {
+    display: none;
+  }
+  
+  @media screen and (max-width: 400){
+    .menuButtons {
+      display: none;
+    }
+    .hamberber {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: 900px){
+    .hamberber {
+      display: inline;
+    }
+    .menuButtons {
+      display: none;
+    }
+  }

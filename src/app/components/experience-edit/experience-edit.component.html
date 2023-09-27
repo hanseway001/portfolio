@@ -1,0 +1,32 @@
+<!-- <p>experience-edit works!</p> -->
+<div class="content">
+<mat-card class="editCard" *ngIf="$experience | async as Experiences">
+    <h1>Experience Edit</h1>
+    <mat-form-field>
+        <mat-label>Tittle</mat-label>
+        <input type="text" matInput [(ngModel)]="Experiences.tittle">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Company</mat-label>
+        <input type="text" matInput [(ngModel)]="Experiences.company">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Start Date</mat-label>
+        <input type="date" matInput [(ngModel)]="Experiences.startdate">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>End Date</mat-label>
+        <input type="date" matInput [(ngModel)]="Experiences.enddate">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input type="text" matInput [(ngModel)]="Experiences.description">
+    </mat-form-field>
+    <mat-card-actions>
+        <!-- align="right"> -->
+        <button mat-raised-button *ngIf="isNew" color="primary" (click)="saveExperience(Experiences)">Save</button>
+        <button mat-raised-button *ngIf="!isNew" (click)="editExperience(Experiences)">Update</button>
+        <button mat-raised-button (click)="deleteExperience()">Delete</button>
+    </mat-card-actions>
+</mat-card>
+</div>
